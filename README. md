@@ -1,0 +1,141 @@
+# Airbnb Pricing Analysis Across European Cities
+
+## Project Overview
+This capstone project explores the main factors associated with Airbnb listing prices across major European cities.
+
+The analysis focuses on understanding how pricing changes depending on:
+- city
+- room type
+- host type
+- guest capacity
+- location and metro access
+- neighborhood quality
+- weekday vs weekend timing
+
+The goal is to answer a clear business question and present the findings in a practical and stakeholder-friendly way.
+
+---
+
+## Business Question
+**What factors are most strongly associated with Airbnb listing prices across European cities, and how can travelers better understand price differences when booking?**
+
+---
+
+## Dataset
+The project is based on the **Airbnb Prices in European Cities** dataset.
+
+- Original data consisted of **20 CSV files**
+- Files were merged into one master dataset
+- The cleaned dataset contains **51,707 listings**
+- After price outlier removal, the filtered analytical dataset contains **48,045 listings**
+
+### Main variables used
+- `price`
+- `city`
+- `day_type`
+- `room_type`
+- `person_capacity`
+- `bedrooms`
+- `host_is_superhost`
+- `biz`
+- `rating`
+- `cleanliness_rating`
+- `dist`
+- `metro_dist`
+- `attr_index_norm`
+- `rest_index_norm`
+
+---
+
+## Tools Used
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Plotly**
+- **Matplotlib**
+- **Jupyter Notebook**
+- **PostgreSQL**
+- **DBeaver**
+- **GitHub**
+
+---
+
+## Project Workflow
+The project followed these main steps:
+
+1. Collected and merged the original Airbnb CSV files
+2. Cleaned and prepared the dataset in Python
+3. Checked duplicates, missing values, and outliers
+4. Removed extreme price outliers to create a filtered analysis dataset
+5. Stored the cleaned dataset in PostgreSQL
+6. Used SQL queries to generate structured summaries and comparisons
+7. Used Python for exploratory analysis, visualization, and presentation building
+8. Created a final presentation to communicate insights clearly
+
+---
+
+## SQL Usage
+The cleaned dataset was imported into a PostgreSQL database and queried using SQL in order to support the analysis.
+
+SQL was used for:
+- city-level price summaries
+- room type comparisons
+- Superhost vs Regular Host comparison
+- Business Host vs Individual Host comparison
+- day type comparisons
+- distance-band summaries
+- neighborhood quality summaries
+
+This SQL layer was used to support and validate the patterns later visualized in Python.
+
+---
+
+## Key Findings
+Some of the main findings from the project include:
+
+- **City matters strongly:** some cities are significantly more expensive than others
+- **Room type is one of the clearest pricing drivers:** entire homes/apartments are the most expensive, while shared rooms are the cheapest
+- **Superhosts are not necessarily more expensive, but they tend to receive better ratings**
+- **Business hosts tend to charge more, while receiving lower ratings than individual hosts**
+- **Larger listings cost more in total, but often offer lower price per guest**
+- **Distance from the city center generally lowers price, although the pattern is not perfectly linear**
+- **Neighborhood quality matters:** attraction level and restaurant access are positively associated with price
+
+---
+
+## Why Median Was Used
+For many of the final presentation insights, **median** was used instead of **average**.
+
+This is because Airbnb price data is skewed and can include extreme values.  
+Median provides a more robust measure of the typical listing price, while average can be more affected by unusually expensive listings.
+
+SQL summaries often used **average** for fast structured aggregation, while the final analytical interpretation in Python relied more heavily on **median**.
+
+---
+
+## Repository Structure
+```text
+Airbnb_Capstone_Project/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   └── 02_eda_analysis.ipynb
+│
+├── sql/
+│   └── queries.sql
+│
+├── slides/
+│   └── Airbnb_Professional_Presentation_Final_Updated.pptx
+│
+├── images/
+│   └── charts and exported visuals
+│
+└── docs/
+    └── project requirements or supporting files
