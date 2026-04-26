@@ -112,30 +112,31 @@ Median provides a more robust measure of the typical listing price, while averag
 SQL summaries often used **average** for fast structured aggregation, while the final analytical interpretation in Python relied more heavily on **median**.
 
 ---
-
 ## Repository Structure
+
 ```text
-Airbnb_Capstone_Project/
+airbnb-pricing-analysis-capstone/
 │
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 │
-├── data/
+├── Data/
 │   ├── raw/
 │   └── processed/
 │
-├── notebooks/
+├── Notebooks/
+│   ├── 01_data_wrangling.ipynb
 │   └── 02_eda_analysis.ipynb
 │
-├── sql/
-│   └── queries.sql
+├── SQL/
+│   └── airbnb_analysis_queries.sql
 │
-├── slides/
-│   └── Airbnb_Professional_Presentation_Final_Updated.pptx
+├── Presentation/
+│   └── Airbnb Islam El Sheikh.pptx
 │
-├── images/
+├── Images/
 │   └── charts and exported visuals
 │
-└── docs/
+└── Docs/
     └── project requirements or supporting files
