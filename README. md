@@ -29,21 +29,22 @@ The project is based on the **Airbnb Prices in European Cities** dataset.
 - The cleaned dataset contains **51,707 listings**
 - After price outlier removal, the filtered analytical dataset contains **48,045 listings**
 
-### Main variables used
-- `price`
-- `city`
-- `day_type`
-- `room_type`
-- `person_capacity`
-- `bedrooms`
-- `host_is_superhost`
-- `biz`
-- `rating`
-- `cleanliness_rating`
-- `dist`
-- `metro_dist`
-- `attr_index_norm`
-- `rest_index_norm`
+### Main Variables Used
+
+- `price` → Price of the listing per night
+- `city` → City where the Airbnb listing is located
+- `day_type` → Indicates whether the listing price is for a weekday or weekend
+- `room_type` → Type of accommodation (e.g. Entire home/apartment, Private room, Shared room)
+- `person_capacity` → Maximum number of guests the listing can accommodate
+- `bedrooms` → Number of bedrooms in the listing
+- `host_is_superhost` → Whether the host has Superhost status (`True/False`)
+- `biz` → Indicates whether the host is a business host or an individual host
+- `rating` → Overall guest rating score
+- `cleanliness_rating` → Guest rating specifically for cleanliness
+- `dist` → Distance from the city center
+- `metro_dist` → Distance from the nearest metro station
+- `attr_index_norm` → Normalized attraction index around the listing
+- `rest_index_norm` → Normalized restaurant index around the listing
 
 ---
 
